@@ -45,7 +45,7 @@ namespace ConsoleUI
         private static void GetUserInfo()
         {
             string guestName;
-            //string otherGuest;
+            
 
             while (true)
             {
@@ -64,7 +64,7 @@ namespace ConsoleUI
                 
                 do
                 { 
-                    raffleNumber = GenerateRandomNumber(1000, 9999);
+                    raffleNumber = GenerateRandomNumber(min, max);
                 }
                 while (guests.ContainsKey(raffleNumber));
 
