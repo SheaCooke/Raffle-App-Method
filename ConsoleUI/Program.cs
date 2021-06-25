@@ -99,15 +99,15 @@ namespace ConsoleUI
         private static int GetRaffleNumber(Dictionary<int,string> dict)
         {
             int[] dictKeys = dict.Keys.ToArray();
-            int totalGuests = dict.Count();
-            int numIterations = rdm.Next(1, totalGuests);
-            int winningKey = 0;
+            //int totalGuests = dict.Count();
+            int index = rdm.Next(1, dictKeys.Length);
+            int winningKey = dictKeys[index];
 
-            for (int i = 0; i < numIterations + 1; i++)
-            {
-                winningKey = dictKeys[i];
+           // for (int i = 0; i < numIterations + 1; i++)
+            //{
+               //winningKey = dictKeys[numIterations];
 
-            }
+           // }
             return winningKey;            
         }
 
